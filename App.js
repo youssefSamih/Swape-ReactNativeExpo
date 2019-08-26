@@ -28,7 +28,7 @@ class App extends React.Component {
         </Text>
         <Button
           icon={{ name: 'code' }}
-          backgroundColor='#03A9F4'
+          backgroundColor='#fff'
           title="View Now !" 
         />
       </Card>
