@@ -29,7 +29,21 @@ class App extends React.Component {
         <Button
           icon={{ name: 'code' }}
           backgroundColor='#fff'
-          title="View Now !" 
+          title="View Now !"
+        />
+      </Card>
+    )
+  }
+
+  renderNoMoreCards() {
+    return (
+      <Card title="All Done!">
+        <Text style={{ marginBottom: 10 }}>
+          There's no more content here!
+        </Text>
+        <Button
+          backgroundColor="#03A9F4"
+          title="Get more!"
         />
       </Card>
     )
@@ -40,7 +54,8 @@ class App extends React.Component {
       <View style={styles.container}>
         <Deck
           data={DATA}
-          renderCard={this.renderCard} 
+          renderCard={this.renderCard}
+          renderNoMoreCards={this.renderNoMoreCards}
         />
       </View>
     )
@@ -51,6 +66,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    marginTop: "5%"
   },
 });
 
